@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adikto Hutabalian | Portfolio</title>
+  <meta name="description" content="Portfolio pribadi - Web Developer & Creative Thinker">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">&lt; Adikto Hutabalian /&gt;</a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="icon-dark"></i>
+          <i data-lucide="sun" class="icon-light"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <!-- Video Background -->
+    <div class="hero-video-bg">
+      <video autoplay muted loop playsinline id="hero-video">
+        <source src="assets/hero-video.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
+    <!-- Floating 3D Objects -->
+    <div class="floating-objects">
+      <div class="float-obj float-obj-1"></div>
+      <div class="float-obj float-obj-2"></div>
+      <div class="float-obj float-obj-3"></div>
+      <div class="float-obj float-obj-4"></div>
+      <div class="float-obj float-obj-5"></div>
+    </div>
+
+    <!-- Hero Full Shine -->
+    <div class="hero-shine"></div>
+
+    <div class="hero-container">
+      <!-- Left: Text Content -->
+      <div class="hero-content">
+        <h1 class="hero-name">Adikto<br>Hutabalian</h1>
+        <p class="hero-role">
+          <span class="typing-text" id="typing-text"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-desc">
+          Mahasiswa Ilmu Komputer di Universitas Cakrawala dengan minat
+          pada Front-End Development dan Quality Assurance. Berpengalaman dalam
+          pengujian aplikasi, dokumentasi bug, serta implementasi desain UI/UX
+          dari Figma ke dalam antarmuka web responsif.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <i data-lucide="arrow-right"></i>
+            Lihat Proyek
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Profile Icon -->
+      <div class="hero-visual">
+        <button class="profile-icon-btn" id="profile-icon-btn" aria-label="Lihat Profil">
+          <div class="profile-icon-ring"></div>
+          <div class="profile-icon-circle">
+            <img src="assets/profile.jpeg" alt="Adikto Hutabalian" class="profile-icon-img">
+          </div>
+          <span class="profile-icon-status"></span>
+        </button>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll ke bawah">
+      <i data-lucide="chevrons-down"></i>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <span class="section-label">About</span>
+      <h2 class="section-title">Tentang Saya</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Saat ini menempuh pendidikan S1 Ilmu Komputer di Universitas Cakrawala
+            dengan fokus di bidang Front-End Development dan Quality Assurance.
+            Selama perkuliahan, saya aktif mengasah kemampuan melalui proyek
+            akademik serta magang di industri teknologi.
+          </p>
+          <p>
+            Pengalaman magang di PT Prasimax dan Seeds Finance memberikan saya
+            pemahaman langsung tentang bagaimana membangun antarmuka web yang responsif
+            sekaligus memastikan kualitas produk melalui pengujian yang terstruktur.
+            Saya terbiasa bekerja dengan Figma, melakukan dokumentasi bug, serta
+            berkolaborasi menggunakan tools seperti GitHub dan ClickUp.
+          </p>
+        </div>
+        <div class="about-details">
+          <div class="detail-item">
+            <i data-lucide="graduation-cap"></i>
+            <div>
+              <span class="detail-label">Pendidikan</span>
+              <span class="detail-value">S1 Ilmu Komputer — Universitas Cakrawala</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <span class="detail-label">Lokasi</span>
+              <span class="detail-value">Indonesia</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <i data-lucide="mail"></i>
+            <div>
+              <span class="detail-label">Email</span>
+              <span class="detail-value">adiktohutabalian72@gmail.com</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <i data-lucide="briefcase"></i>
+            <div>
+              <span class="detail-label">Fokus</span>
+              <span class="detail-value">Front-End Dev & QA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <span class="section-label">Skills</span>
+      <h2 class="section-title">Keahlian</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="layout"></i>
+          </div>
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>React JS</span>
+            <span>PHP</span>
+            <span>UI/UX Design</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="bug"></i>
+          </div>
+          <h3>Quality Assurance</h3>
+          <div class="skill-tags">
+            <span>Manual Testing</span>
+            <span>Bug Reporting</span>
+            <span>Test Documentation</span>
+            <span>UAT</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="wrench"></i>
+          </div>
+          <h3>Tools</h3>
+          <div class="skill-tags">
+            <span>GitHub</span>
+            <span>Bitbucket</span>
+            <span>VS Code</span>
+            <span>Figma</span>
+            <span>ClickUp</span>
+            <span>Canva</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="brain"></i>
+          </div>
+          <h3>Soft Skills</h3>
+          <div class="skill-tags">
+            <span>Manajemen Waktu</span>
+            <span>Pemecahan Masalah</span>
+            <span>Berpikir Kritis</span>
+            <span>Kerjasama Tim</span>
+            <span>Komunikasi</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="globe"></i>
+          </div>
+          <h3>Bahasa</h3>
+          <div class="skill-tags">
+            <span>Indonesia</span>
+            <span>Inggris</span>
+            <span>Batak Toba</span>
+            <span>Jepang</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <span class="section-label">Experience</span>
+      <h2 class="section-title">Pengalaman</h2>
+      <div class="exp-list">
+
+        <div class="exp-item">
+          <div class="exp-left">
+            <span class="exp-date">2026</span>
+            <span class="exp-company">Seeds Finance</span>
+            <span class="exp-location">Education, Training & Research — Jakarta Pusat</span>
+          </div>
+          <div class="exp-right">
+            <h3>Magang Quality Analyst</h3>
+            <p>Bertanggung jawab atas pengujian aplikasi, pelaporan bug, dan memastikan pengalaman pengguna yang lancar. Berfokus pada pengujian manual, dokumentasi masalah, serta peningkatan kualitas produk menggunakan ClickUp.</p>
+            <div class="exp-tags">
+              <span>QA Testing</span>
+              <span>ClickUp</span>
+              <span>Bug Reporting</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-left">
+            <span class="exp-date">2025</span>
+            <span class="exp-company">PT Prasimax</span>
+            <span class="exp-location">ICT — Depok, Indonesia</span>
+          </div>
+          <div class="exp-right">
+            <h3>Magang Front End & QA</h3>
+            <p>Mengidentifikasi, mendokumentasikan, dan melaporkan bug sesuai standar QA. Mengembangkan antarmuka web responsif menggunakan HTML, CSS, dan React JS berdasarkan desain Figma, serta memastikan konsistensi tampilan dan pengalaman pengguna di berbagai perangkat dan browser.</p>
+            <div class="exp-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>React JS</span>
+              <span>Figma</span>
+              <span>QA</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <span class="section-label">Projects</span>
+      <h2 class="section-title">Proyek</h2>
+
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="web">Web App</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card" data-category="web" data-id="ecommerce">
+          <div class="project-icon">
+            <i data-lucide="shopping-cart"></i>
+          </div>
+          <h3>E-Commerce Platform</h3>
+          <p>Platform belanja online dengan fitur keranjang, checkout, dan payment gateway.</p>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <i data-lucide="external-link"></i> Demo
+            </a>
+            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <i data-lucide="github"></i> Source
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="frontend" data-id="weather">
+          <div class="project-icon">
+            <i data-lucide="cloud-sun"></i>
+          </div>
+          <h3>Weather Dashboard</h3>
+          <p>Dashboard cuaca interaktif dengan data real-time dan visualisasi grafik.</p>
+          <div class="project-tech">
+            <span>Vue.js</span>
+            <span>Chart.js</span>
+            <span>API</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <i data-lucide="external-link"></i> Demo
+            </a>
+            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <i data-lucide="github"></i> Source
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="fullstack" data-id="chat">
+          <div class="project-icon">
+            <i data-lucide="message-square"></i>
+          </div>
+          <h3>Chat Application</h3>
+          <p>Aplikasi chat real-time dengan fitur group chat, file sharing, dan notifikasi.</p>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Socket.io</span>
+            <span>Express</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <i data-lucide="external-link"></i> Demo
+            </a>
+            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <i data-lucide="github"></i> Source
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web" data-id="taskmanager">
+          <div class="project-icon">
+            <i data-lucide="check-square"></i>
+          </div>
+          <h3>Task Manager</h3>
+          <p>Aplikasi manajemen tugas dengan drag-and-drop, deadline reminder, dan statistik.</p>
+          <div class="project-tech">
+            <span>Next.js</span>
+            <span>Prisma</span>
+            <span>PostgreSQL</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <i data-lucide="external-link"></i> Demo
+            </a>
+            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <i data-lucide="github"></i> Source
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <span class="section-label">Contact</span>
+      <h2 class="section-title">Hubungi Saya</h2>
+      <div class="contact-grid">
+        <p class="contact-desc">
+          Tertarik bekerja sama atau sekadar menyapa? Jangan ragu untuk menghubungi saya.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:adiktohutabalian72@gmail.com" class="contact-item">
+            <i class="bx bx-envelope"></i>
+            <span>adiktohutabalian72@gmail.com</span>
+          </a>
+          <a href="https://github.com/adiktohutabalian" target="_blank" rel="noopener" class="contact-item">
+            <i class="bx bxl-github"></i>
+            <span>github.com/adiktohutabalian</span>
+          </a>
+          <a href="https://www.linkedin.com/in/adikto-hutabalian" target="_blank" rel="noopener" class="contact-item">
+            <i class="bx bxl-linkedin"></i>
+            <span>linkedin.com/in/adikto-hutabalian</span>
+          </a>
+          <a href="https://www.instagram.com/adiktohutabalian/" target="_blank" rel="noopener" class="contact-item">
+            <i class="bx bxl-instagram"></i>
+            <span>@adiktohutabalian</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p>&copy; 2026 Adikto Hutabalian</p>
+        <div class="footer-socials">
+          <a href="https://github.com/adiktohutabalian" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/adikto-hutabalian" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.instagram.com/adiktohutabalian/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="mailto:adiktohutabalian72@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROFILE MODAL -->
+  <div class="profile-modal-overlay" id="profile-modal-overlay">
+    <div class="profile-modal">
+      <button class="profile-modal-close" id="profile-modal-close" aria-label="Tutup">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="profile-modal-content">
+        <div class="profile-modal-header">
+          <div class="profile-modal-avatar">
+            <img src="assets/profile.jpeg" alt="Adikto Hutabalian" class="profile-modal-avatar-img">
+            <div class="profile-modal-avatar-ring"></div>
+            <span class="profile-modal-status-dot"></span>
+          </div>
+          <h3 class="profile-modal-name">Adikto Hutabalian</h3>
+          <p class="profile-modal-role">Front-End Developer & QA</p>
+        </div>
+
+        <div class="profile-modal-divider"></div>
+
+        <div class="profile-modal-stats">
+          <div class="profile-modal-stat">
+            <span class="profile-modal-stat-number">2</span>
+            <span class="profile-modal-stat-label">Internships</span>
+          </div>
+          <div class="profile-modal-stat">
+            <span class="profile-modal-stat-number">2028</span>
+            <span class="profile-modal-stat-label">Graduation</span>
+          </div>
+          <div class="profile-modal-stat">
+            <span class="profile-modal-stat-number">5+</span>
+            <span class="profile-modal-stat-label">Tech Stack</span>
+          </div>
+        </div>
+
+        <div class="profile-modal-divider"></div>
+
+        <div class="profile-modal-info">
+          <div class="profile-modal-info-item">
+            <i data-lucide="graduation-cap"></i>
+            <span>S1 Ilmu Komputer — Universitas Cakrawala</span>
+          </div>
+          <div class="profile-modal-info-item">
+            <i data-lucide="map-pin"></i>
+            <span>Indonesia</span>
+          </div>
+          <div class="profile-modal-info-item">
+            <i data-lucide="mail"></i>
+            <span>adiktohutabalian72@gmail.com</span>
+          </div>
+          <div class="profile-modal-info-item">
+            <i data-lucide="briefcase"></i>
+            <span>Front-End Dev & QA</span>
+          </div>
+        </div>
+
+        <div class="profile-modal-divider"></div>
+
+        <div class="profile-modal-socials">
+          <a href="https://github.com/adiktohutabalian" target="_blank" rel="noopener" class="profile-modal-social" aria-label="GitHub">
+            <i class="bx bxl-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/adikto-hutabalian" target="_blank" rel="noopener" class="profile-modal-social" aria-label="LinkedIn">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/adiktohutabalian/" target="_blank" rel="noopener" class="profile-modal-social" aria-label="Instagram">
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a href="mailto:adiktohutabalian72@gmail.com" class="profile-modal-social" aria-label="Email">
+            <i class="bx bx-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/porto.js"></script>
+</body>
+</html>
