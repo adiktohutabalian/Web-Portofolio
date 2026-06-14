@@ -52,8 +52,8 @@ const PROJECTS = {
     ],
     tech: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'Stripe'],
     images: [],
-    demo: '#',
-    source: '#'
+    demo: 'https://github.com/adiktohutabalian/ecommerce-platform',
+    source: 'https://github.com/adiktohutabalian/ecommerce-platform'
   },
   weather: {
     icon: 'cloud-sun',
@@ -75,8 +75,8 @@ const PROJECTS = {
     ],
     tech: ['Vue.js', 'Chart.js', 'OpenWeatherMap API', 'CSS3 Animations'],
     images: [],
-    demo: '#',
-    source: '#'
+    demo: 'https://github.com/adiktohutabalian/weather-dashboard',
+    source: 'https://github.com/adiktohutabalian/weather-dashboard'
   },
   chat: {
     icon: 'message-square',
@@ -98,8 +98,8 @@ const PROJECTS = {
     ],
     tech: ['React', 'Socket.io', 'Express', 'Node.js', 'MongoDB'],
     images: [],
-    demo: '#',
-    source: '#'
+    demo: 'https://github.com/adiktohutabalian/chat-application',
+    source: 'https://github.com/adiktohutabalian/chat-application'
   },
   taskmanager: {
     icon: 'check-square',

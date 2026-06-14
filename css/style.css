@@ -322,6 +322,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   height: 100%;
   z-index: 0;
   overflow: hidden;
+  background: linear-gradient(135deg, #09090b 0%, #1a1030 50%, #09090b 100%);
+}
+
+[data-theme="light"] .hero-video-bg {
+  background: linear-gradient(135deg, #fafafa 0%, #f0e6ff 50%, #fafafa 100%);
 }
 
 .hero-video-bg video {
@@ -1192,35 +1197,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ========================================
    PROJECTS
    ======================================== */
-.project-filters {
-  display: none; /* Sembunyikan filter, aktifkan lagi kalau sudah ada project */
-  /* display: flex; */
-  gap: 8px;
-  margin-bottom: 32px;
-  flex-wrap: wrap;
-}
-
-.filter-btn {
-  padding: 6px 16px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-full);
-  transition: all 0.2s var(--ease);
-}
-
-.filter-btn:hover {
-  color: var(--accent);
-  border-color: var(--accent-border);
-}
-
-.filter-btn.active {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
-}
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1239,8 +1215,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-color: var(--accent-border);
   transform: translateY(-2px);
 }
-
-.project-card.hidden { display: none; }
 
 .project-icon {
   width: 44px;

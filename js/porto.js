@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initTypingEffect();
   initScrollAnimations();
   initActiveNavHighlight();
-  initProjectFilters();
   initProfileModal();
   initProjectModal();
   initTabVisibility();
+  initHeroVideo();
 });
 
 /* THEME TOGGLE */
@@ -188,31 +188,6 @@ function initActiveNavHighlight() {
   sections.forEach(section => observer.observe(section));
 }
 
-/* PROJECT FILTERS */
-function initProjectFilters() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filter = btn.getAttribute('data-filter');
-
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          card.classList.remove('hidden');
-          card.style.animation = 'fadeInUp 0.3s var(--ease) forwards';
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    });
-  });
-}
-
 /* PROJECT CARD CLICK → NAVIGATE TO DETAIL PAGE */
 function initProjectModal() {
   const projectCards = document.querySelectorAll('.project-card');
@@ -286,4 +261,22 @@ function initTabVisibility() {
       });
     }
   });
+}
+
+/* HERO VIDEO — load only on desktop */
+function initHeroVideo() {
+  const video = document.getElementById('hero-video');
+  if (!video) return;
+
+  // Only load video on screens >= 768px
+  if (window.innerWidth >= 768) {
+    const source = document.createElement('source');
+    source.src = 'assets/hero-video.mp4';
+    source.type = 'video/mp4';
+    video.appendChild(source);
+    video.load();
+  } else {
+    // On mobile, hide the video element (overlay gradient is enough)
+    video.style.display = 'none';
+  }
 }

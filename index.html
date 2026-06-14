@@ -4,7 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adikto Hutabalian | Portfolio</title>
-  <meta name="description" content="Portfolio pribadi - Web Developer & Creative Thinker">
+  <meta name="description" content="Portfolio Adikto Hutabalian — Mahasiswa Ilmu Komputer, Front-End Developer & Quality Assurance. Berpengalaman magang di PT Prasimax dan Seeds Finance.">
+  <meta name="author" content="Adikto Hutabalian">
+  <meta name="keywords" content="Adikto Hutabalian, Front-End Developer, Quality Assurance, Portfolio, Web Developer">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Adikto Hutabalian | Portfolio">
+  <meta property="og:description" content="Front-End Developer & QA — Mahasiswa Ilmu Komputer di Universitas Cakrawala.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/adiktohutabalian/adiktohutabalian/main/profile.jpeg">
+  <meta property="og:url" content="https://adiktohutabalian.github.io">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Adikto Hutabalian | Portfolio">
+  <meta name="twitter:description" content="Front-End Developer & QA — Mahasiswa Ilmu Komputer di Universitas Cakrawala.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/adiktohutabalian/adiktohutabalian/main/profile.jpeg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -42,10 +62,10 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <!-- Video Background -->
+    <!-- Video Background (desktop only, mobile pakai gradient) -->
     <div class="hero-video-bg">
-      <video autoplay muted loop playsinline id="hero-video">
-        <source src="assets/hero-video.mp4" type="video/mp4">
+      <video autoplay muted loop playsinline id="hero-video" aria-hidden="true">
+        <!-- source di-set via JS hanya di desktop -->
       </video>
       <div class="hero-video-overlay"></div>
     </div>
@@ -288,13 +308,6 @@
       <span class="section-label">Projects</span>
       <h2 class="section-title">Proyek</h2>
 
-      <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">Semua</button>
-        <button class="filter-btn" data-filter="web">Web App</button>
-        <button class="filter-btn" data-filter="frontend">Frontend</button>
-        <button class="filter-btn" data-filter="fullstack">Fullstack</button>
-      </div>
-
       <div class="projects-grid">
 
         <article class="project-card" data-category="web" data-id="ecommerce">
@@ -309,10 +322,7 @@
             <span>MongoDB</span>
           </div>
           <div class="project-links">
-            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
-              <i data-lucide="external-link"></i> Demo
-            </a>
-            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            <a href="https://github.com/adiktohutabalian/ecommerce-platform" target="_blank" rel="noopener" onclick="event.stopPropagation()">
               <i data-lucide="github"></i> Source
             </a>
           </div>
@@ -330,10 +340,7 @@
             <span>API</span>
           </div>
           <div class="project-links">
-            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
-              <i data-lucide="external-link"></i> Demo
-            </a>
-            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            <a href="https://github.com/adiktohutabalian/weather-dashboard" target="_blank" rel="noopener" onclick="event.stopPropagation()">
               <i data-lucide="github"></i> Source
             </a>
           </div>
@@ -351,10 +358,7 @@
             <span>Express</span>
           </div>
           <div class="project-links">
-            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
-              <i data-lucide="external-link"></i> Demo
-            </a>
-            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            <a href="https://github.com/adiktohutabalian/chat-application" target="_blank" rel="noopener" onclick="event.stopPropagation()">
               <i data-lucide="github"></i> Source
             </a>
           </div>
@@ -372,10 +376,7 @@
             <span>PostgreSQL</span>
           </div>
           <div class="project-links">
-            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
-              <i data-lucide="external-link"></i> Demo
-            </a>
-            <a href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            <a href="https://github.com/adiktohutabalian/task-manager" target="_blank" rel="noopener" onclick="event.stopPropagation()">
               <i data-lucide="github"></i> Source
             </a>
           </div>
@@ -392,7 +393,7 @@
       <h2 class="section-title">Hubungi Saya</h2>
       <div class="contact-grid">
         <p class="contact-desc">
-          Tertarik bekerja sama atau sekadar menyapa? Jangan ragu untuk menghubungi saya.
+          Tertarik bekerja sama atau sekadar menyapa? Jangan ragu untuk menghubungi saya melalui email atau media sosial di bawah ini.
         </p>
         <div class="contact-links">
           <a href="mailto:adiktohutabalian72@gmail.com" class="contact-item">
