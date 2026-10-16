@@ -171,3 +171,25 @@ nav.menu button {
   width: 17px;
   height: 17px;
 }
+
+/* Tampilan HP: urutan Profil singkat dulu, Waktu saat ini di paling bawah */
+@media (max-width: 820px) {
+  #home .hero {
+    gap: 28px;
+  }
+  #home .hero-main {
+    display: contents;
+  }
+  #home .hero-intro {
+    order: 1;
+  }
+  #home .panel {
+    order: 2;
+  }
+  #home .hero-time {
+    order: 3;
+  }
+  #home .hero-time .lab {
+    margin-top: 0;
+  }
+}

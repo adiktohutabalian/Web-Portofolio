@@ -45,10 +45,11 @@
     </nav>
 
     <main class="wrap">
-      <!-- BERANDA -->
-      <section class="view" id="home">
-        <div class="hero">
-          <div>
+    <!-- BERANDA -->
+    <section class="view" id="home">
+      <div class="hero">
+        <div class="hero-main">
+          <div class="hero-intro">
             <span class="tag">QUALITY ASSURANCE · FRONT-END</span>
             <h1 class="d">Adikto<br />Hutabalian</h1>
             <p
@@ -78,6 +79,8 @@
               </div>
               <div class="card" style="background: var(--pink)"><b class="d">3,65</b><span>IPK</span></div>
             </div>
+          </div>
+          <div class="hero-time">
             <div class="lab">Waktu saat ini</div>
             <div class="clocks">
               <div class="card">
@@ -126,73 +129,74 @@
               </div>
             </div>
           </div>
-          <aside class="panel">
-            <div style="display: flex; justify-content: space-between; align-items: start; gap: 10px">
-              <div>
-                <p class="over">Profil singkat</p>
-                <h2 style="font-size: 20px; margin-top: 6px; letter-spacing: -0.03em">
-                  Sekilas tentang saya
-                </h2>
-              </div>
-              <span class="badge" style="background: var(--ink); color: var(--bg)">2026</span>
-            </div>
-            <div class="sxl" style="margin-top: 18px">
-              <div>
-                <span class="ico" style="background: #ef5b21"
-                  ><svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M2 9l10-5 10 5-10 5z" />
-                    <path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5" />
-                    <path d="M22 9v6" /></svg></span
-                ><span>S1 Ilmu Komputer, Universitas Cakrawala</span>
-              </div>
-              <div>
-                <span class="ico" style="background: #c9e6ef"
-                  ><svg viewBox="0 0 24 24" aria-hidden="true">
-                    <rect x="3" y="7" width="18" height="13" rx="2" />
-                    <path d="M9 7V5a1 1 0 011-1h4a1 1 0 011 1v2" />
-                    <path d="M3 13h18" />
-                    <path d="M11 12.5h2v3h-2z" /></svg></span
-                ><span>Magang terakhir: Quality Analyst, Seeds Finance</span>
-              </div>
-              <div>
-                <span class="ico" style="background: #fff8ed"
-                  ><svg viewBox="0 0 24 24" aria-hidden="true">
-                    <rect x="8" y="8" width="8" height="11" rx="4" />
-                    <path d="M12 8V5" />
-                    <path d="M9 4.5l1.5 1.5M15 4.5L13.5 6" />
-                    <path d="M4 12h4M16 12h4M5 19l3-2.5M19 19l-3-2.5M5 6l3 2.5M19 6l-3 2.5" /></svg></span
-                ><span>Fokus: pengujian aplikasi &amp; antarmuka web</span>
-              </div>
-              <div>
-                <span class="ico" style="background: #ffd8df"
-                  ><svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z" />
-                    <circle cx="12" cy="10" r="2.5" /></svg></span
-                ><span>Jakarta Selatan · WIB</span>
-              </div>
-            </div>
-            <div
-              style="
-                background: var(--sky);
-                border-radius: 16px;
-                padding: 12px 16px;
-                margin-top: 16px;
-                display: flex;
-                justify-content: space-between;
-                font-size: 13px;
-                font-weight: 700;
-              "
-            >
-              <span>Sesi aktif</span><span id="up">00:00</span>
-            </div>
-            <div class="row" style="margin-top: 18px">
-              <button class="btn" style="padding: 10px 18px; font-size: 13px" data-go="certs">
-                Lihat sertifikat</button
-              ><button class="btn" style="padding: 10px 18px; font-size: 13px" id="theme">Ganti tema</button>
-            </div>
-          </aside>
         </div>
-      </section>
+        <aside class="panel">
+          <div style="display: flex; justify-content: space-between; align-items: start; gap: 10px">
+            <div>
+              <p class="over">Profil singkat</p>
+              <h2 style="font-size: 20px; margin-top: 6px; letter-spacing: -0.03em">
+                Sekilas tentang saya
+              </h2>
+            </div>
+            <span class="badge" style="background: var(--ink); color: var(--bg)">2026</span>
+          </div>
+          <div class="sxl" style="margin-top: 18px">
+            <div>
+              <span class="ico" style="background: #ef5b21"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M2 9l10-5 10 5-10 5z" />
+                  <path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5" />
+                  <path d="M22 9v6" /></svg></span
+              ><span>S1 Ilmu Komputer, Universitas Cakrawala</span>
+            </div>
+            <div>
+              <span class="ico" style="background: #c9e6ef"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="7" width="18" height="13" rx="2" />
+                  <path d="M9 7V5a1 1 0 011-1h4a1 1 0 011 1v2" />
+                  <path d="M3 13h18" />
+                  <path d="M11 12.5h2v3h-2z" /></svg></span
+              ><span>Magang terakhir: Quality Analyst, Seeds Finance</span>
+            </div>
+            <div>
+              <span class="ico" style="background: #fff8ed"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="8" y="8" width="8" height="11" rx="4" />
+                  <path d="M12 8V5" />
+                  <path d="M9 4.5l1.5 1.5M15 4.5L13.5 6" />
+                  <path d="M4 12h4M16 12h4M5 19l3-2.5M19 19l-3-2.5M5 6l3 2.5M19 6l-3 2.5" /></svg></span
+              ><span>Fokus: pengujian aplikasi &amp; antarmuka web</span>
+            </div>
+            <div>
+              <span class="ico" style="background: #ffd8df"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z" />
+                  <circle cx="12" cy="10" r="2.5" /></svg></span
+              ><span>Jakarta Selatan · WIB</span>
+            </div>
+          </div>
+          <div
+            style="
+              background: var(--sky);
+              border-radius: 16px;
+              padding: 12px 16px;
+              margin-top: 16px;
+              display: flex;
+              justify-content: space-between;
+              font-size: 13px;
+              font-weight: 700;
+            "
+          >
+            <span>Sesi aktif</span><span id="up">00:00</span>
+          </div>
+          <div class="row" style="margin-top: 18px">
+            <button class="btn" style="padding: 10px 18px; font-size: 13px" data-go="certs">
+              Lihat sertifikat</button
+            ><button class="btn" style="padding: 10px 18px; font-size: 13px" id="theme">Ganti tema</button>
+          </div>
+        </aside>
+      </div>
+    </section>
 
       <!-- TENTANG -->
       <section class="view" id="about">
