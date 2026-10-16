@@ -1,0 +1,35 @@
+/* Variabel warna & tema (terang/gelap) */
+
+:root {
+  --ink: #071a32;
+  --orange: #ef5b21;
+  --bg: #fff8ed;
+  --pink: #ffd8df;
+  --sky: #c9e6ef;
+  --card: #fff;
+  --muted: #526272;
+  --dot: rgba(7, 26, 50, 0.08);
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #fff8ed;
+    --bg: #0b1626;
+    --pink: #4a2a3a;
+    --sky: #17395d;
+    --card: #12243b;
+    --muted: #a9b8c9;
+    --dot: rgba(255, 255, 255, 0.07);
+  }
+}
+:root[data-theme="dark"] {
+  --ink: #fff8ed;
+  --bg: #0b1626;
+  --pink: #4a2a3a;
+  --sky: #17395d;
+  --card: #12243b;
+  --muted: #a9b8c9;
+  --dot: rgba(255, 255, 255, 0.07);
+}

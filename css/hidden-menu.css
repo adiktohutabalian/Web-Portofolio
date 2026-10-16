@@ -1,0 +1,145 @@
+/* Menu tersembunyi "lebih dekat" */
+
+.sx {
+  grid-column: 1/-1;
+}
+.sxt {
+  font: inherit;
+  font-size: 12px;
+  background: none;
+  border: 0;
+  color: var(--muted);
+  opacity: 0.45;
+  cursor: pointer;
+  padding: 4px 2px;
+  transition: 0.2s;
+}
+.sxt:hover,
+.sxt[aria-expanded="true"] {
+  opacity: 1;
+}
+.sxb {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+.sxb[hidden],
+.sxp[hidden] {
+  display: none;
+}
+.sxb button {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1.5px solid var(--ink);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 99px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.sxb button:hover {
+  transform: translateY(-2px);
+}
+.sxb button.on {
+  background: var(--pink);
+}
+.sxp {
+  margin-top: 12px;
+  background: var(--pink);
+  border: 2px solid var(--ink);
+  border-radius: 26px;
+  padding: 18px;
+  box-shadow: 5px 6px 0 var(--ink);
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  align-items: center;
+  animation: rev 0.4s both;
+}
+.sxp.solo {
+  grid-template-columns: 1fr;
+}
+.pol {
+  background: #fff;
+  color: #071a32;
+  padding: 8px 8px 8px;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  transform: rotate(-3deg);
+  box-shadow: 3px 4px 0 var(--ink);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+.pol .ph {
+  aspect-ratio: 3/4;
+  background: var(--sky);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: #071a32;
+  padding: 8px;
+  font-weight: 400;
+}
+.pol .ph img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pol p {
+  margin-top: 8px;
+}
+.sxl {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+.mus {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.mus button {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  border: 2px solid var(--ink);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 99px;
+  padding: 8px 16px;
+  cursor: pointer;
+  box-shadow: 2px 3px 0 var(--ink);
+  transition: 0.2s;
+}
+.mus button:hover {
+  transform: translateY(-2px);
+}
+.mus button[hidden] {
+  display: none;
+}
+.mus a {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.sxl div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: var(--card);
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  padding: 9px 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.sxt {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}

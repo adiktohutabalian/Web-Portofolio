@@ -1,0 +1,581 @@
+/* Halaman Hobi: galeri, kartu hobi, lightbox, animasi */
+
+.mq {
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  border-radius: 99px;
+  background: var(--ink);
+  color: var(--bg);
+  margin: 22px 0 4px;
+}
+.mq div {
+  display: flex;
+  gap: 28px;
+  white-space: nowrap;
+  width: max-content;
+  padding: 10px 0;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  font-size: 13px;
+  animation: mq 22s linear infinite;
+}
+@keyframes mq {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.hb-top {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 24px;
+  align-items: center;
+}
+.hcards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 22px;
+}
+.hc {
+  border: 2px solid var(--ink);
+  border-radius: 22px;
+  padding: 16px;
+  box-shadow: 4px 4px 0 var(--ink);
+  background: var(--card);
+  transition: 0.2s;
+}
+.hc:hover {
+  transform: translateY(-4px) rotate(-0.6deg);
+}
+.hc:nth-child(1) {
+  background: var(--pink);
+}
+.hc:nth-child(2) {
+  background: var(--sky);
+}
+.hc .e {
+  font-size: 26px;
+}
+.hc b {
+  display: block;
+  margin-top: 8px;
+  font-family: Fraunces, serif;
+  font-size: 20px;
+}
+.hc p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+  line-height: 1.45;
+}
+.wd {
+  background: var(--pink);
+  border: 2px solid var(--ink);
+  border-radius: 30px;
+  padding: 16px;
+  box-shadow: 7px 8px 0 var(--ink);
+}
+.wd img {
+  transition: opacity 0.18s;
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid var(--ink);
+  display: block;
+}
+.gal {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 28px;
+  margin-top: 24px;
+}
+.fr {
+  position: relative;
+  background: #fff;
+  color: #071a32;
+  border: 2px solid #071a32;
+  border-radius: 10px;
+  padding: 10px 10px 12px;
+  box-shadow: 5px 6px 0 var(--ink);
+  transition: 0.22s;
+  cursor: zoom-in;
+  text-align: left;
+  font: inherit;
+}
+.fr:nth-child(odd) {
+  transform: rotate(-1.2deg);
+}
+.fr:nth-child(even) {
+  transform: rotate(1deg);
+}
+.fr:hover,
+.fr:focus-visible {
+  transform: translateY(-6px) rotate(0);
+  box-shadow: 8px 10px 0 var(--orange);
+}
+.fr:after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  width: 72px;
+  height: 20px;
+  background: rgba(239, 91, 33, 0.8);
+  transform: translateX(-50%) rotate(-3deg);
+}
+.fr .im {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 2px solid #071a32;
+}
+.fr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s;
+}
+.fr:hover img {
+  transform: scale(1.06);
+}
+.fr .cp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+.fr b {
+  font-family: Fraunces, serif;
+  font-size: 18px;
+  display: block;
+}
+.fr small {
+  color: #526272;
+}
+.fr .chip {
+  background: #ffd8df;
+  flex: none;
+}
+.slot {
+  border: 2px dashed var(--ink);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  min-height: 200px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+}
+#lb {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 26, 50, 0.9);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  z-index: 20;
+  padding: 20px;
+  cursor: zoom-out;
+}
+#lb.on {
+  display: flex;
+}
+#lb img {
+  max-width: 94vw;
+  max-height: 78vh;
+  border: 3px solid #fff8ed;
+  border-radius: 12px;
+}
+#lb p {
+  color: #fff8ed;
+  font-weight: 700;
+}
+@media (max-width: 820px) {
+  .hb-top {
+    grid-template-columns: 1fr;
+  }
+  .hcards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mq div {
+    animation: none;
+  }
+}
+#lb img {
+  max-height: 86vh;
+}
+.fx {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+#hobi > *:not(.fx) {
+  position: relative;
+  z-index: 1;
+}
+.fx span {
+  position: absolute;
+  bottom: -40px;
+  opacity: 0;
+  animation:
+    rise linear infinite,
+    sway ease-in-out infinite alternate;
+}
+.fx svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  stroke: none;
+}
+@keyframes rise {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.75;
+  }
+  85% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translateY(-115vh) rotate(300deg);
+    opacity: 0;
+  }
+}
+@keyframes sway {
+  from {
+    translate: -16px 0;
+  }
+  to {
+    translate: 16px 0;
+  }
+}
+@keyframes bob {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -6px;
+  }
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(34px) scale(0.94);
+  }
+}
+#hobi .tag {
+  animation: bob 3.2s ease-in-out infinite;
+}
+#hobi .hc .ico {
+  animation: bob 3s ease-in-out infinite;
+}
+#hobi .hc:nth-child(2) .ico {
+  animation-delay: 0.5s;
+}
+#hobi .hc:nth-child(3) .ico {
+  animation-delay: 1s;
+}
+#hobi.on .hc,
+#hobi.on .fr,
+#hobi.on .mq {
+  animation: pop 0.7s backwards;
+}
+#hobi.on .wd {
+  animation:
+    pop 0.7s backwards,
+    bob 5s ease-in-out 0.7s infinite;
+}
+#hobi.on .hc:nth-child(2) {
+  animation-delay: 0.12s;
+}
+#hobi.on .hc:nth-child(3) {
+  animation-delay: 0.24s;
+}
+#hobi.on .fr:nth-child(1) {
+  animation-delay: 0.1s;
+}
+#hobi.on .fr:nth-child(2) {
+  animation-delay: 0.18s;
+}
+#hobi.on .fr:nth-child(3) {
+  animation-delay: 0.26s;
+}
+#hobi.on .fr:nth-child(4) {
+  animation-delay: 0.34s;
+}
+#hobi.on .fr:nth-child(5) {
+  animation-delay: 0.42s;
+}
+#hobi.on .fr:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.fr:hover,
+.fr:focus-visible {
+  transform: perspective(800px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-6px);
+}
+.fr:hover {
+  transition:
+    transform 0.1s ease-out,
+    box-shadow 0.22s;
+}
+.bst {
+  position: fixed;
+  z-index: 30;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  pointer-events: none;
+  animation: burst 0.8s ease-out forwards;
+}
+.bst svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  stroke: #071a32;
+  stroke-width: 1.2;
+}
+@keyframes burst {
+  to {
+    transform: translate(var(--dx), var(--dy)) scale(0.2) rotate(200deg);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fx,
+  .bst {
+    display: none;
+  }
+  #hobi,
+  #hobi * {
+    animation: none !important;
+  }
+}
+.slot .bi {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+/* Penyesuaian ukuran: konsisten dengan Beranda */
+
+#hobi .hb-top {
+  gap: 40px;
+}
+#hobi .tag {
+  padding: 6px 14px;
+  font-size: 11px;
+}
+#hobi .lead {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 480px;
+  margin-top: 14px;
+}
+#hobi .wd {
+  padding: 14px;
+  border-radius: 26px;
+  box-shadow: 5px 6px 0 var(--ink);
+}
+#hobi .wd img {
+  border-radius: 14px;
+}
+#hobi .mq {
+  margin: 22px 0 4px;
+}
+#hobi .mq div {
+  padding: 8px 0;
+  font-size: 12px;
+}
+#hobi .hcards {
+  gap: 12px;
+  margin-top: 20px;
+}
+#hobi .hc {
+  padding: 14px 16px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+#hobi .hc b {
+  font-size: 18px;
+  margin-top: 6px;
+}
+#hobi .hc p {
+  font-size: 13px;
+}
+#hobi .ico.big {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+}
+#hobi .ico.big svg {
+  width: 24px;
+  height: 24px;
+}
+#hobi .lab {
+  margin-top: 26px;
+  font-size: 11px;
+}
+#hobi .gal {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+#hobi .fr {
+  padding: 8px 8px 10px;
+}
+#hobi .fr b {
+  font-size: 16px;
+}
+#hobi .fr small {
+  font-size: 12px;
+}
+#hobi .slot {
+  min-height: 160px;
+  font-size: 13px;
+}
+
+/* Perbaikan tata letak Hobi: breadcrumb, kartu vibe, tombol YouTube, bintang lebih jelas */
+#hobi .hb-top {
+  align-items: start;
+}
+.crumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.crumb button {
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-underline-offset: 3px;
+}
+.crumb button:hover {
+  color: var(--orange);
+}
+.crumb b {
+  color: var(--ink);
+}
+#hobi .wd .over {
+  margin-bottom: 10px;
+}
+#hobi .mus a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--card);
+  border: 2px solid var(--ink);
+  border-radius: 99px;
+  box-shadow: 2px 3px 0 var(--ink);
+  transition: 0.2s;
+}
+#hobi .mus a:hover {
+  transform: translateY(-2px);
+}
+#hobi .mus a svg {
+  fill: currentColor;
+  stroke: none;
+}
+.vibe {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 440px;
+  margin-top: 24px;
+  padding: 14px 16px;
+  background: var(--card);
+  border: 2px solid var(--ink);
+  border-radius: 22px;
+  box-shadow: 4px 5px 0 var(--ink);
+}
+.vibe .ico {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #ef5b21;
+}
+.vibe .ico svg {
+  width: 24px;
+  height: 24px;
+}
+.vibe .ico.sw {
+  animation: swap 0.4s;
+}
+@keyframes swap {
+  from {
+    transform: scale(0.6) rotate(-20deg);
+    opacity: 0;
+  }
+}
+.vibe .over {
+  font-size: 11px;
+}
+.vibe b {
+  display: block;
+  margin-top: 2px;
+  font-family: Fraunces, serif;
+  font-size: 18px;
+}
+.vibe small {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.vibe .vh {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.vibe .vh span {
+  padding: 2px 10px;
+  background: var(--pink);
+  border: 1.5px solid var(--ink);
+  border-radius: 99px;
+}
+#hobi .fx svg {
+  stroke: #071a32;
+  stroke-width: 1.2;
+}
+@keyframes rise {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.95;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-115vh) rotate(300deg);
+    opacity: 0;
+  }
+}
